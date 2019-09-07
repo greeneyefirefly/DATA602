@@ -167,7 +167,7 @@ def exercise11():
 
     # ------ Place code below here \/ \/ \/ ------ 
     
-    pi = round(math.pi - 4e-11, 10)
+    pi = 3.1415926535
     
     # ------ Place code above here /\ /\ /\ ------
     return pi

@@ -34,7 +34,7 @@ def exercise02():
     
     animals = ['cat', 'dog', 'crouching tiger', 'hidden dragon', 'manta ray']
     
-    # 'len' return the number of items in a container
+    # len() return the number of items in a container
     len_animals = len(animals)
     
     for i in range(len_animals):
@@ -52,7 +52,7 @@ def exercise03():
 
     # ------ Place code below here \/ \/ \/ ------
     
-    # sorts items in descending order
+    # '.sort' sorts items in descending order when 'reverse = True'
     countdown.sort(reverse = True) 
     
     # Python's default count is from 0
@@ -84,13 +84,13 @@ def exercise04(more_temperatures, iot_sensor_points, a, b, c, d, e):
     # Then, extract temperature values from iot_sensor_points dictionary, and convert to a list. 
     # Lastly, add the single temperature readings into a list.
     
-    # 'extend' takes a list as an argument and appends all of the elements
+    # '.extend' takes a list as an argument and appends all of the elements
     temperatures.extend(list(more_temperatures) + list(iot_sensor_points.values()) + [a,b,c,d,e])
     
     # Organize the temperatures in descending order
     temperatures.sort(reverse = True)
     
-    # Obtaining every 5th item from temperatures and sort in ascending order
+    # Obtaining every 5th item from temperatures and sort in ascending order using sorted()
     samples = sorted(temperatures[4:len(temperatures):5])
     
     # Shallow copy of samples and sort back in descending order
@@ -136,6 +136,7 @@ def exercise07(n):
 
     # ------ Place code below here \/ \/ \/ ------
     
+    # set() build an unordered collection of unique elements
     return len(n) == len(set(n))
 
     # ------ Place code above here /\ /\ /\ ------
@@ -195,7 +196,7 @@ def display_menu(menu):
                     # Exit option return the number of the last menu option chosen prior to exit & the length of menu
                 elif choice == n_new:
                     active = False
-                    if len(choices) == 1: # fail safe if user immediately quits
+                    if len(choices) == 1: # fail safe if user immediately quits so it still returns last menu option
                         choices.append(choices)
                     return choices[-2], n 
                 # Menu sections prints the menu option chosen
@@ -228,8 +229,8 @@ def exercise09():
     
     for pic in range(10):
         dog_media = r.get(url) # get a random URL each iteration
-        source = dog_media.json() # returns a dictionary
-        source_value = list(source.values()) # get the value from the dictionary
+        source = dog_media.json() # '.json' returns a dictionary
+        source_value = list(source.values()) # gets the value from the dictionary
         dogs.insert(pic, source_value[0]) # add the new URL each iteration
 
     # ------ Place code above here /\ /\ /\ ------

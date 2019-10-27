@@ -36,7 +36,7 @@ main_page = '''
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Number</label>  
   <div class="col-md-4">
-  <input name="number" id="textinput" type="number" placeholder="Enter a number" class="form-control input-md">
+  <input id="textinput" type="number" placeholder="Enter a number" class="form-control input-md">
   </div>
 </div>
 <!-- Button -->
@@ -54,7 +54,11 @@ main_page = '''
 '''
 
     # ------ Place code below here \/ \/ \/ ------
-    
+
+# Modification to main_page using Python regex
+main_page = re.sub('<input', '<input name="number"', main_page)
+
+# Execution of Flask web browser  
 app = Flask(__name__)
 
 # Load the HTML form

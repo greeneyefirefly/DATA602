@@ -17,7 +17,7 @@ and display the number multiplied by 5 on the browser.
 Hint: The HTML in main_page needs a modification in the text input. The modification should be done using Python regular expressions (regex)
 '''
 
-from flask import Flask, request, render_template
+from flask import Flask, request
 import re
 
 main_page = '''

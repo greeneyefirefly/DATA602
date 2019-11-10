@@ -222,6 +222,7 @@ def exercise13(n):
     
     plt.plot(s.cumsum())
     plt.title('Cumulative Plot of a Random Integer Series')
+    plt.xticks(rotation = 45)
     plt.xlabel('Date')
     plt.ylabel('Cumulative Sum')
 
